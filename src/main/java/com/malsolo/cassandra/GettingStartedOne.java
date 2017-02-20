@@ -3,10 +3,16 @@ package com.malsolo.cassandra;
 import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Session;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class Main {
+public class GettingStartedOne {
+
+    final static Logger logger = LoggerFactory.getLogger(GettingStartedOne.class);
 
     public static void main(String[] args) {
+        logger.info("Cassandra getting started with Java, part I.");
+
         Cluster cluster;
         Session session;
 
@@ -23,6 +29,7 @@ public class Main {
 
         cluster.close();
 
+        logger.info("Cassandra getting started with Java, part I. Done!");
     }
 
 }
